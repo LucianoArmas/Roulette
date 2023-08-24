@@ -107,17 +107,33 @@ body{
 
 .container .wheel .number span{
   position: relative;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  font-size: 15px;
+  transform: rotate(320deg);
+  -webkit-transform: rotate(320deg);
+  -moz-transform: rotate(320deg);
+  -ms-transform: rotate(320deg);
+  -o-transform: rotate(320deg);
+  font-size: 25px;
   font-weight: 700;
-  color: white;
-  text-shadow: 3px 5px 2px rgba(0,0,0,0.15);
+  color: black;
+  text-shadow: 0px 5px 2px rgba(0,0,0,0.15);
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  background: white;
 }
 
+.container .wheel .number img{
+  position:absolute;
+  z-index: -1;
+  width: 120px;
+  height: 120px;
+  opacity: 50%;
+}
 
-
-
+.container .wheel .number .his, .container .wheel .number .geo, .container .wheel .number .ent{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
