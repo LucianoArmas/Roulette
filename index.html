@@ -12,10 +12,10 @@
   <div class="container">
     <div class="spinBtn"><div class="spinSelec"></div>Spin</div>
     <div class="wheel">
-      <div class="number" style="--i:1; --clr:#db7093"><span>Entretenimiento</span></div>
-      <div class="number" style="--i:2; --clr:#20b2aa"><span>Deporte</span></div>
-      <div class="number" style="--i:3; --clr:#daa520"><span>Historia</span></div>
-      <div class="number" style="--i:4; --clr:#3cb371"><span>Geografia</span></div>
+      <div class="number" style="--i:1; --clr:#db7093"><span class="miSpan 0">Entretenimiento</span></div>
+      <div class="number" style="--i:2; --clr:#20b2aa"><span class="miSpan 1">Deporte</span></div>
+      <div class="number" style="--i:3; --clr:#daa520"><span class="miSpan 2">Historia</span></div>
+      <div class="number" style="--i:4; --clr:#3cb371"><span class="miSpan 3">Geografia</span></div>
     </div>
   </div>
   
@@ -30,14 +30,14 @@
         </select>
     </div>
     
-    <div class="selectorCategory">
+    <!-- <div class="selectorCategory">
       <label for="selector">Seleccione una categoria</label>
       <select class="form-control" name="selector" id="selector">
         <option></option>
         <option class="0">Deporte</option>
         <option class="1">Entretenimiento</option>
       </select>
-    </div>
+    </div> -->
   </div>
 
 
@@ -58,7 +58,7 @@
 </div>
 
   <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
-  <script src="/js/ruleta.js"></script>
-  <script src="/js/code.js"></script>
+  <script src="/js/ruleta.js" type="module"></script>
+  <script src="/js/code.js" type="module"></script>
 </body>
 </html>

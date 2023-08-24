@@ -1,3 +1,4 @@
+import {makeQuestion} from './code.js';
 let wheel = document.querySelector(".wheel");
 let spinBtn = document.querySelector(".spinBtn");
 const spinSelector = document.querySelector(".spinSelec");
@@ -55,6 +56,13 @@ spinBtn.addEventListener("click", ()=>{
           // (optPos.top < spinSel.bottom)
         )
       ){
+
+        const textSpan = (o.querySelector(".miSpan"));
+        const cate = textSpan.textContent;
+        const numCate = textSpan.classList[1];      
+
+        makeQuestion(cate, numCate);
+
         console.log(o);
         console.log(spinSelector);
         console.log(optPos);
