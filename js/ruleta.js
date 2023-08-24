@@ -1,7 +1,6 @@
 import {makeQuestion} from './code.js';
 let wheel = document.querySelector(".wheel");
 let spinBtn = document.querySelector(".spinBtn");
-const spinSelector = document.querySelector(".spinSelec");
 const spinSel = document.querySelector(".spinSelec").getBoundingClientRect();
 const opts = document.querySelectorAll(".number");
 let value = Math.ceil(Math.random() * 3800);
@@ -10,6 +9,8 @@ let value = Math.ceil(Math.random() * 3800);
 spinBtn.addEventListener("click", ()=>{
   wheel.style.transform = `rotate(${value}deg)`;
   value += Math.ceil(Math.random() * 3800);
+
+  soundBtnEffect();
 
   setTimeout(()=>{
     opts.forEach(o => {
@@ -55,16 +56,17 @@ spinBtn.addEventListener("click", ()=>{
         const numCate = textSpan.classList[1];      
 
         makeQuestion(cate, numCate);
-
-        console.log(o);
-        console.log(spinSelector);
-        console.log(optPos);
-        console.log(spinSel);
       }
     })
   }, 5500);
 });
 
+
+
+const soundBtnEffect = ()=>{
+  let audio = new Audio("../sounds/boton.mp3");
+  audio.play();
+}
 
 
 

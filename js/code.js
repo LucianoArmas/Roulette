@@ -58,10 +58,19 @@ rightBtn.addEventListener("click",()=>{
   console.log(lastNumPreg);
   console.log(arrayNums);
   (arrayNums[lastNumCate]).push(lastNumPreg);
+  soundEffect("correct")
 });
 
 
 wrongBtn.addEventListener("click",()=>{
   containerShow.classList.add("hidden");
   containerShow.classList.remove("popup");
+  soundEffect("incorrect")
 });
+
+
+
+const soundEffect = (answer) =>{
+  let audio = new Audio(`../sounds/${answer}.mp3`);
+  audio.play();
+}
