@@ -1,0 +1,104 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: gray;
+}
+
+
+/*Main*/
+.main{
+  display: block;
+}
+
+
+/*Form*/
+.form-group, .inputContainer{
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.inputContainer{
+  margin-top: 50px;
+}
+
+
+
+
+
+/*Question*/
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popupContent {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.btnsPopUpContainer{
+  display:flex;
+  justify-content: center;
+  height: 5rem;
+}
+
+.btnPopUp{
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#closeBtn {
+  background: rgb(217, 103, 61);
+  color: whitesmoke;
+  margin-left: 5px;
+}
+
+#minBtn{
+  background: white;
+  color: rgb(31, 157, 199);
+}
+
+#closeBtn:hover, #minBtn:hover{
+  background: rgb(31, 73, 199);
+  color: whitesmoke;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
