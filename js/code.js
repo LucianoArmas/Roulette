@@ -1,5 +1,4 @@
 const datos = document.getElementById("excel-input");
-// const selector = document.getElementById("selector");
 const selDif = document.getElementById("selectorD");
 let arrayNums = [
   [],
@@ -49,41 +48,6 @@ export const makeQuestion = (cate,numCate) =>{
 }
 
 
-
-
-
-// selector.addEventListener("change",  ()=>{
-//   const selecOp = selector.options[selector.selectedIndex];
-//   const selecTxt = selecOp.textContent;
-//   const selectOpClass = selecOp.classList[0];
-//   // console.log(selectOpClass)
-
-//   const selecD = selDif.options[selDif.selectedIndex];
-//   const selecTxtD = selecD.textContent;
-  
-
-//   readXlsxFile(datos.files[0], {sheet : `${selecTxt}`}).then(
-//     (rows)=>{
-//       rows.forEach(e => {
-//         let numeroAleatorio = Math.floor(Math.random() * 3) + 1;
-
-//         while((e[1] != numeroAleatorio) && ((arrayNums[selectOpClass]).includes(e[1]))){
-//           numeroAleatorio = Math.floor(Math.random() * 3) + 1;
-//           }
-        
-//           if((e[3] == selecTxtD) && (!arrayNums[selectOpClass].includes(e[1]))){
-//             containerShow.classList.remove("hidden");
-//             containerShow.classList.add("popup");
-//             const msg = containerShow.querySelector(".msg");
-//             msg.innerHTML = e[2];
-
-//             lastNumCate = selectOpClass;
-//             lastNumPreg = e[1];
-
-//         }
-//       });
-//     });
-// });
 
 
 rightBtn.addEventListener("click",()=>{

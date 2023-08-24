@@ -9,7 +9,6 @@ let value = Math.ceil(Math.random() * 3800);
 
 spinBtn.addEventListener("click", ()=>{
   wheel.style.transform = `rotate(${value}deg)`;
-  // wheel.style.transform = `rotate(1612deg)`;
   value += Math.ceil(Math.random() * 3800);
 
   setTimeout(()=>{
@@ -26,8 +25,6 @@ spinBtn.addEventListener("click", ()=>{
           (optPos.top < spinSel.bottom) &&
           (optPos.bottom > spinSel.top) &&
           (optPos.bottom > spinSel.bottom)
-          // (optPos.bottom > spinSel.top) &&
-          // (optPos.top < spinSel.bottom)
         ) 
         ||
         (
@@ -39,8 +36,6 @@ spinBtn.addEventListener("click", ()=>{
           (optPos.top < spinSel.bottom) &&
           (optPos.bottom > spinSel.top) &&
           (optPos.bottom > spinSel.bottom)
-          // (optPos.bottom > spinSel.top) &&
-          // (optPos.top < spinSel.bottom)
         )
         ||
         (
@@ -52,8 +47,6 @@ spinBtn.addEventListener("click", ()=>{
           (optPos.top < spinSel.bottom) &&
           (optPos.bottom > spinSel.top) &&
           (optPos.bottom > spinSel.bottom)
-          // (optPos.bottom > spinSel.top) &&
-          // (optPos.top < spinSel.bottom)
         )
       ){
 
