@@ -1,14 +1,20 @@
 const datos = document.getElementById("excel-input");
 const selector = document.getElementById("selector");
 const selDif = document.getElementById("selectorD");
-// let arrayNumsDeportes = [];
-// let arrayNumsEntre = [];
-// let arrayNumsHistoria = [];
-// let arrayNumsGeog = [];
 let arrayNums = [
   [],
   []
 ];
+
+
+const containerShow = document.getElementById("popup");
+const rightBtn = document.getElementById("right");
+const wrongBtn = document.getElementById("wrong");
+
+
+let lastNumPreg = 0;
+let lastNumCate = 0;
+
 
 selector.addEventListener("change",  ()=>{
   const selecOp = selector.options[selector.selectedIndex];
@@ -30,9 +36,17 @@ selector.addEventListener("change",  ()=>{
           }
         
           if((e[3] == selecTxtD) && (!arrayNums[selectOpClass].includes(e[1]))){
-            console.log(e);
-            (arrayNums[selectOpClass]).push(e[1]);
-            console.log(arrayNums);
+            containerShow.classList.remove("hidden");
+            containerShow.classList.add("popup");
+            const msg = containerShow.querySelector(".msg");
+            msg.innerHTML = e[2];
+
+            lastNumCate = selectOpClass;
+            lastNumPreg = e[1];
+
+            // console.log(e[2]);
+            // (arrayNums[selectOpClass]).push(e[1]);
+            // console.log(arrayNums);
         }
 
         
@@ -66,3 +80,19 @@ selector.addEventListener("change",  ()=>{
     });
 });
 
+
+rightBtn.addEventListener("click",()=>{
+  containerShow.classList.add("hidden");
+  containerShow.classList.remove("popup");
+
+  console.log(lastNumCate);
+  console.log(lastNumPreg);
+  console.log(arrayNums);
+  (arrayNums[lastNumCate]).push(lastNumPreg);
+});
+
+
+wrongBtn.addEventListener("click",()=>{
+  containerShow.classList.add("hidden");
+  containerShow.classList.remove("popup");
+});
