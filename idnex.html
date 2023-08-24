@@ -5,19 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RULETA</title>
 </head>
-<body>
+<body style="background-color:gray">
   <div class="form-group">
-    <label for="selector">Seleccione una categoria</label>
-    <select class="form-control" name="selector" id="selector">
-      <option></option>
-      <option>Deporte</option>
-      <option>Entretenimiento</option>
-    </select>
+    <div class="selectorDificulty">
+        <label for="selectorD">Seleccione una dificultad</label>
+        <select class="form-control" name="selectorD" id="selectorD">
+          <option></option>
+          <option>Facil</option>
+          <option>Dificil</option>
+        </select>
+    </div>
+    <div class="selectorCategory">
+      <label for="selector">Seleccione una categoria</label>
+      <select class="form-control" name="selector" id="selector">
+        <option></option>
+        <option class="0">Deporte</option>
+        <option class="1">Entretenimiento</option>
+      </select>
+    </div>
   </div>
-  <div>
+
+
+  
+  <div class="inputContainer"> 
     <input type="file" class="form-ctrl" id="excel-input">
   </div>
-  
+
+  <div class="showContainer">
+
+  </div>
+
   <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
   <script src="code.js"></script>
 </body>
