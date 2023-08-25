@@ -36,8 +36,11 @@ export const makeQuestion = (cate,numCate) =>{
           if((e[3] == selecTxtD) && (!arrayNums[numCate].includes(e[1]))){
             containerShow.classList.remove("hidden");
             containerShow.classList.add("popup");
+            const titCAte = containerShow.querySelector(".cate");
+            titCAte.innerHTML = cate;
+            titCAte.setAttribute("style",`background: ${e[4]}`);
             const msg = containerShow.querySelector(".msg");
-            msg.innerHTML = e[2];
+            msg.innerHTML = `${e[1]}- ${e[2]}`;
 
             lastNumCate = numCate;
             lastNumPreg = e[1];
