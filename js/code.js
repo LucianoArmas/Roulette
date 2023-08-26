@@ -1,5 +1,8 @@
 const datos = document.getElementById("excel-input");
-const selDif = document.getElementById("selectorD");
+const btnDif = document.querySelector(".btnDif");
+let categoria = "";
+let numCategoria = 0;
+
 let arrayNums = [
   [],
   [],
@@ -12,17 +15,23 @@ const containerShow = document.getElementById("popup");
 const rightBtn = document.getElementById("right");
 const wrongBtn = document.getElementById("wrong");
 
+const popDif = document.getElementById("popupDif");
+
 
 let lastNumPreg = 0;
 let lastNumCate = 0;
 
+export const selectDif = (cate,numCate) =>{
+  popDif.classList.remove("hidden");
+  popDif.classList.add("popup");
+  
+  numCategoria = numCate;
+  categoria = cate;
 
-export const makeQuestion = (cate,numCate) =>{
-  const selecD = selDif.options[selDif.selectedIndex];
-  const selecTxtD = selecD.textContent;
+};
 
-  console.log(arrayNums);
-  console.log(arrayNums[numCate]);
+
+const makeQuestion = (cate,numCate, selecTxtD) =>{
 
   readXlsxFile(datos.files[0], {sheet : `${cate}`}).then(
     (rows)=>{
@@ -57,9 +66,6 @@ rightBtn.addEventListener("click",()=>{
   containerShow.classList.add("hidden");
   containerShow.classList.remove("popup");
 
-  console.log(lastNumCate);
-  console.log(lastNumPreg);
-  console.log(arrayNums);
   (arrayNums[lastNumCate]).push(lastNumPreg);
   soundEffect("correct")
 });
@@ -71,6 +77,16 @@ wrongBtn.addEventListener("click",()=>{
   soundEffect("incorrect")
 });
 
+
+btnDif.addEventListener("click", ()=>{
+  popDif.classList.remove("popup");
+  popDif.classList.add("hidden");
+  const selDif = document.getElementById("selectorD");
+  const selecD = selDif.options[selDif.selectedIndex];
+  const selecTxtD = selecD.textContent;
+  
+  makeQuestion(categoria, numCategoria, selecTxtD);
+});
 
 
 const soundEffect = (answer) =>{

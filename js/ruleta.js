@@ -1,4 +1,4 @@
-import {makeQuestion} from './code.js';
+import {selectDif} from './code.js';
 let wheel = document.querySelector(".wheel");
 let spinBtn = document.querySelector(".spinBtn");
 const spinSel = document.querySelector(".spinSelec").getBoundingClientRect();
@@ -55,7 +55,7 @@ spinBtn.addEventListener("click", ()=>{
         const cate = textSpan.textContent;
         const numCate = textSpan.classList[1];      
 
-        makeQuestion(cate, numCate);
+        selectDif(cate, numCate);
       }
     })
   }, 5500);

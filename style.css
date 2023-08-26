@@ -41,7 +41,7 @@ body{
   z-index: 20;
 }
 
-#popupContent {
+#popupContent, #popupContentDif{
   background-color: #fff;
   padding: 20px;
   text-align: center;
@@ -51,6 +51,12 @@ body{
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
 }
+
+#popupContentDif{
+  color: black;
+  width: 500px;
+}
+
 
 .btnsPopUpContainer{
   display:flex;
